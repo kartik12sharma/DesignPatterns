@@ -4,9 +4,9 @@ public class payUAdpInterface implements adapterInterfaceForPayment {
     payUAPI payU = new payUAPI();
 
     @Override
-    public void payMoney(String userID, String objects, double amount) {
+    public void payMoney(detailsDTO requuestObj) {
         System.out.println("Before payment is processed " + this.returnPaymentStatus());
-        payU.Pay(userID, (long) amount);
+        payU.Pay(requuestObj.userID, (long) requuestObj.amount);
         System.out.println("After payment is processed " + this.returnPaymentStatus());
     }
 
