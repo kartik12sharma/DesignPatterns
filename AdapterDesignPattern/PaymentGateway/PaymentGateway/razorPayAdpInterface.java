@@ -4,9 +4,10 @@ public class razorPayAdpInterface implements adapterInterfaceForPayment {
     RazorPayAPI razorAPI = new RazorPayAPI();
 
     @Override
-    public void payMoney(String userID, String objects, double amount) {
+    public void payMoney(detailsDTO requuestObj) {
         System.out.println("Payment status before processing " + this.returnPaymentStatus());
-        razorAPI.makePayment(userID, objects, amount);
+        razorAPI.prePay(requuestObj.userID, requuestObj.objects, requuestObj.amount);
+        razorAPI.makePayment(requuestObj.userID, requuestObj.objects, requuestObj.amount);
         razorAPI.paymentStatus = RazorPayStatus.Success;
         System.out.println("Payment status after processing " + this.returnPaymentStatus());
     }

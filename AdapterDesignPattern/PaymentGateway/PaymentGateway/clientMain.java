@@ -7,7 +7,7 @@ public class clientMain {
         String userID = "user11001";
         String objects = "obj1, obj2, obj3, obj4";
         double amount = 201.50;
-        razorPayAdpInterface razorObj = new razorPayAdpInterface();
+        adapterInterfaceForPayment razorObj = new razorPayAdpInterface();
         razorObj.payMoney(userID, objects, amount);
         razorObj.returnPaymentStatus();
     }
