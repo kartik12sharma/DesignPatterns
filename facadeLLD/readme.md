@@ -1,0 +1,1 @@
+<centre><h3>Facade LLD It's used to hide the complexity Of a method or a class from the client which Which is trying to access its functionality. It's basically done by creating a wrapper around the complex function or class and providing the access via the wrapper </h3></centre>
